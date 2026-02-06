@@ -1,0 +1,175 @@
+:root{
+  --bg:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --line:#e5e7eb;
+  --accent:#2563eb;
+  --soft:#f8fafc;
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+  --radius:18px;
+  --max: 980px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Noto Sans KR,Apple SD Gothic Neo,"Malgun Gothic",sans-serif;color:var(--text);background:var(--bg);}
+a{color:inherit}
+.container{max-width:var(--max);margin:0 auto;padding:0 18px;}
+
+.hero{
+  background:linear-gradient(180deg, #f8fafc 0%, #ffffff 65%);
+  border-bottom:1px solid var(--line);
+  padding:34px 0 18px;
+}
+.badge{
+  display:inline-block;
+  font-size:12px;
+  color:#334155;
+  background:#eef2ff;
+  border:1px solid #e0e7ff;
+  padding:6px 10px;
+  border-radius:999px;
+  margin:0 0 10px;
+}
+.hero h1{
+  margin:0 0 12px;
+  line-height:1.15;
+  font-size:34px;
+  letter-spacing:-.02em;
+}
+.meta-row{
+  display:flex; gap:10px; flex-wrap:wrap;
+  margin:8px 0 14px;
+}
+.meta-item{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:13px;
+  display:flex; gap:8px; align-items:center;
+}
+.meta-item span{color:var(--muted)}
+.notice{
+  margin:0;
+  color:#374151;
+  font-size:14px;
+  line-height:1.55;
+}
+
+.section{padding:26px 0;border-bottom:1px solid var(--line);}
+.section:last-of-type{border-bottom:none}
+h2{margin:0 0 6px;font-size:20px;letter-spacing:-.01em}
+.sub{margin:0 0 14px;color:var(--muted);font-size:14px;line-height:1.55}
+
+.cards{display:grid;grid-template-columns:1fr;gap:14px}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:16px;
+  box-shadow: var(--shadow);
+}
+.card h3{margin:0 0 6px;font-size:16px}
+.meta{color:var(--muted);font-size:13px;margin-bottom:12px}
+.table-wrap{overflow:auto}
+table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  min-width:520px;
+}
+thead th{
+  text-align:left;
+  font-size:13px;
+  color:#374151;
+  background:var(--soft);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:10px 12px;
+}
+tbody td{
+  padding:10px 12px;
+  border-bottom:1px solid var(--line);
+  font-size:14px;
+}
+tbody tr:last-child td{border-bottom:none}
+.baseline{min-width:720px}
+.cardname{font-weight:600}
+.mini{margin:0;padding-left:18px}
+.mini li{margin:4px 0;color:#374151}
+.mini strong{color:#111827}
+
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  padding:10px 14px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff;
+  font-size:14px;
+  transition:transform .05s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.btn:hover{
+  border-color:#cbd5e1;
+  box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+.btn:active{transform:translateY(1px)}
+
+.contacts{margin:0;padding-left:18px}
+.contacts li{margin:6px 0;color:#111827}
+.muted{color:var(--muted);font-size:13px;margin-top:10px}
+
+.storebox{
+  display:grid;
+  grid-template-columns: 1.3fr .7fr;
+  gap:14px;
+  background:var(--soft);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:16px;
+}
+.storename{font-weight:800;font-size:16px;margin-bottom:6px}
+.storeaddr{color:#374151;margin-bottom:8px}
+.storephone a{color:var(--accent);font-weight:700}
+.hours-title{font-weight:700;margin-bottom:6px}
+.hours ul{margin:0;padding-left:18px}
+.hours li{margin:4px 0;color:#374151}
+.feel{margin:12px 0 0;color:#374151}
+
+.related{margin:0;padding-left:18px}
+.related li{margin:6px 0}
+.related a{color:var(--accent)}
+
+.ad-section{
+  padding:18px 0;
+  border-bottom:1px solid var(--line);
+}
+.footer{
+  padding:18px 0 32px;
+}
+.ad-label{
+  color:var(--muted);
+  font-size:12px;
+  margin-bottom:10px;
+}
+.fineprint{
+  margin:12px 0 0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.5;
+}
+
+@media (min-width: 860px){
+  .cards{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:40px}
+}
+@media (max-width: 600px){
+  table{min-width:0}
+  .baseline{min-width:0}
+  .storebox{grid-template-columns:1fr}
+  .btn{width:100%}
+}
